@@ -1,4 +1,7 @@
 "use client";
+
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-8">
@@ -10,16 +13,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-gray-300 mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-gray-400 hover:text-blue-500 transition-colors">Home</a>
+                <Link href="/" className="text-gray-400 hover:text-blue-500 transition-colors">Home</Link>
               </li>
               <li>
-                <a href="/about" className="text-gray-400 hover:text-blue-500 transition-colors">About Us</a>
+                <Link href="/about" className="text-gray-400 hover:text-blue-500 transition-colors">About Us</Link>
               </li>
               <li>
-                <a href="/shop" className="text-gray-400 hover:text-blue-500 transition-colors">Shop</a>
+                <Link href="/shop" className="text-gray-400 hover:text-blue-500 transition-colors">Shop</Link>
               </li>
               <li>
-                <a href="/contact" className="text-gray-400 hover:text-blue-500 transition-colors">Contact</a>
+                <Link href="/contact" className="text-gray-400 hover:text-blue-500 transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
@@ -29,16 +32,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-gray-300 mb-4">Customer Service</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/shipping" className="text-gray-400 hover:text-blue-500 transition-colors">Shipping Info</a>
+                <Link href="/shipping" className="text-gray-400 hover:text-blue-500 transition-colors">Shipping Info</Link>
               </li>
               <li>
-                <a href="/returns" className="text-gray-400 hover:text-blue-500 transition-colors">Returns</a>
+                <Link href="/returns" className="text-gray-400 hover:text-blue-500 transition-colors">Returns</Link>
               </li>
               <li>
-                <a href="/faq" className="text-gray-400 hover:text-blue-500 transition-colors">FAQ</a>
+                <Link href="/faq" className="text-gray-400 hover:text-blue-500 transition-colors">FAQ</Link>
               </li>
               <li>
-                <a href="/terms" className="text-gray-400 hover:text-blue-500 transition-colors">Terms & Conditions</a>
+                <Link href="/terms" className="text-gray-400 hover:text-blue-500 transition-colors">Terms & Conditions</Link>
               </li>
             </ul>
           </div>
@@ -47,18 +50,18 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-300 mb-4">Follow Us</h3>
             <div className="flex space-x-6">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <i className="fab fa-facebook-f text-2xl"></i>
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              </Link>
+              <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <i className="fab fa-instagram text-2xl"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              </Link>
+              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <i className="fab fa-twitter text-2xl"></i>
-              </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              </Link>
+              <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <i className="fab fa-linkedin text-2xl"></i>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -71,10 +74,10 @@ export default function Footer() {
                 <p>City, Country</p>
               </li>
               <li className="text-gray-400 mt-2">
-                <a href="tel:+1234567890" className="hover:text-blue-500 transition-colors">+1 234 567 890</a>
+                <Link href="tel:+1234567890" className="hover:text-blue-500 transition-colors">+1 234 567 890</Link>
               </li>
               <li className="text-gray-400 mt-2">
-                <a href="mailto:info@example.com" className="hover:text-blue-500 transition-colors">info@example.com</a>
+                <Link href="mailto:info@example.com" className="hover:text-blue-500 transition-colors">info@example.com</Link>
               </li>
             </ul>
           </div>
@@ -84,8 +87,8 @@ export default function Footer() {
         <div className="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400">
           <p>© 2024 Kids Clothing Store. All rights reserved.</p>
           <div className="mt-2">
-            <a href="/privacy" className="hover:text-blue-500 transition-colors">Privacy Policy</a> | 
-            <a href="/terms" className="hover:text-blue-500 transition-colors"> Terms & Conditions</a>
+            <Link href="/privacy" className="hover:text-blue-500 transition-colors">Privacy Policy</Link> | 
+            <Link href="/terms" className="hover:text-blue-500 transition-colors"> Terms & Conditions</Link>
           </div>
         </div>
       </div>

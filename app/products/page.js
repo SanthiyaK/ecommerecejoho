@@ -1,4 +1,3 @@
- "use client"
 import { SearchBar } from "../action/SearchAction";
 import ProductsList from "./ProductsList"; // Ensure this path is correct
 

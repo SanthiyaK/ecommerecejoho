@@ -93,16 +93,14 @@ export function Header() {
     <header className="bg-gradient-to-r from-blue-500 to-teal-500 text-white p-4 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
       {/* Logo Section */}
       <div className="flex flex-col items-center sm:items-start space-y-2">
-        <h2 className="text-xl font-bold text-white">Kids' Clothing</h2>
+        <h2 className="text-xl font-bold text-white">Kids&apos; Clothing</h2>
         <Image
           src="/kid_dresses/product9.webp"
           alt="Kids Clothing"
           width={70}
           height={70}
           className="rounded-lg object-cover shadow-lg"
-          unoptimized
         />
-
       </div>
 
       {/* Search Bar */}
@@ -116,20 +114,19 @@ export function Header() {
         />
       </form>
 
-              {/* Category Dropdown */}
-        <div className="mt-4 sm:mt-0">
-          <select
-            value={selectedCategory}
-            onChange={handleCategoryChange}
-            className="py-3 px-5 text-lg font-medium rounded-lg bg-gradient-to-r from-blue-500 to-teal-500 text-white focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300 ease-in-out shadow-lg w-full"
-          >
-            <option value="" className="bg-white text-black">All Categories</option>
-            <option value="kids Dresses" className="bg-white text-black">Kids Dresses</option>
-            <option value="chudithars" className="bg-white text-black">Chudithars</option>
-            <option value="accessories" className="bg-white text-black">Accessories</option>
-            {/* Add other categories as needed */}
-          </select>
-        </div>
+      {/* Category Dropdown */}
+      <div className="mt-4 sm:mt-0">
+        <select
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+          className="py-3 px-5 text-lg font-medium rounded-lg bg-gradient-to-r from-blue-500 to-teal-500 text-white focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300 ease-in-out shadow-lg w-full"
+        >
+          <option value="" className="bg-white text-black">All Categories</option>
+          <option value="kids Dresses" className="bg-white text-black">Kids Dresses</option>
+          <option value="chudithars" className="bg-white text-black">Chudithars</option>
+          <option value="accessories" className="bg-white text-black">Accessories</option>
+        </select>
+      </div>
 
       {/* Header Items (Login/Signup/Profile/Cart) */}
       <div className="flex items-center space-x-4 sm:space-x-6 mt-4 sm:mt-0">
@@ -177,50 +174,52 @@ export function Header() {
 
             {/* Profile Picture and Dropdown */}
             <div className="relative">
-              <img
+              <Image
                 src={profilePicture || "/default-avatar.png"}
                 alt="Profile"
-                className="w-10 h-10 rounded-full border-2 border-white cursor-pointer"
+                width={40}
+                height={40}
+                className="rounded-full border-2 border-white cursor-pointer"
                 onClick={handleProfileClick}
               />
               {dropdownVisible && (
-                 <div
-                 ref={dropdownRef}
-                 className="absolute right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-50 ring-1 ring-gray-200 dark:ring-gray-700"
-               >
-                 <div className="flex flex-col p-2">
-                   {/* Profile Link */}
-                   <Link href="/profile" passHref>
-                     <button className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 transition-colors duration-200 rounded-md">
-                       Profile
-                     </button>
-                   </Link>
-                   
-                   {/* Products Link */}
-                   <Link href="/products" passHref>
-                     <button className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 transition-colors duration-200 rounded-md">
-                       Products
-                     </button>
-                   </Link>
-                   
-                   {/* Admin Link (only for admin users) */}
-                   {userRole === "admin" && (
-                     <Link href="/admin/dashboard" passHref>
-                       <button className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 transition-colors duration-200 rounded-md">
-                         Admin Dashboard
-                       </button>
-                     </Link>
-                   )}
-                   
-                   {/* Logout Button */}
-                   <button
-                     onClick={logout}
-                     className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 rounded-b-md transition-colors duration-200"
-                   >
-                     Logout
-                   </button>
-                 </div>
-               </div>
+                <div
+                  ref={dropdownRef}
+                  className="absolute right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-50 ring-1 ring-gray-200 dark:ring-gray-700"
+                >
+                  <div className="flex flex-col p-2">
+                    {/* Profile Link */}
+                    <Link href="/profile" passHref>
+                      <button className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 transition-colors duration-200 rounded-md">
+                        Profile
+                      </button>
+                    </Link>
+                    
+                    {/* Products Link */}
+                    <Link href="/products" passHref>
+                      <button className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 transition-colors duration-200 rounded-md">
+                        Products
+                      </button>
+                    </Link>
+                    
+                    {/* Admin Link (only for admin users) */}
+                    {userRole === "admin" && (
+                      <Link href="/admin/dashboard" passHref>
+                        <button className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 transition-colors duration-200 rounded-md">
+                          Admin Dashboard
+                        </button>
+                      </Link>
+                    )}
+                    
+                    {/* Logout Button */}
+                    <button
+                      onClick={logout}
+                      className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 rounded-b-md transition-colors duration-200"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                </div>
               )}
             </div>
 

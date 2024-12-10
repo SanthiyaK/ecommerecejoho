@@ -78,7 +78,7 @@ export default function LoginForm() {
 
         {/* Register Link */}
         <div className="text-center text-gray-600">
-          <p className="text-sm">Don't have an account? 
+          <p className="text-sm">Don&apos;t have an account? {/* Fixed apostrophe */}
             <Link href="/signup" className="text-indigo-600 hover:text-indigo-700"> Sign up</Link>
           </p>
         </div>

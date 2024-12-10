@@ -26,7 +26,7 @@ export default function ContactForm() {
       {/* Left Panel: Contact Details */}
       <div className="flex-1 md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h1>
-        <p className="text-lg text-gray-600">We'd love to hear from you!</p>
+        <p className="text-lg text-gray-600">We&apos;d love to hear from you!</p> {/* Fixed apostrophe */}
         <p className="text-lg text-gray-600 mt-2">Feel free to reach out with any questions or feedback.</p>
 
         <div className="mt-6">

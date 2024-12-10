@@ -4,7 +4,7 @@ import React from 'react'
 import { useRouter } from 'next/navigation';
 import { UserLogout } from '../action/loginAction';
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const logout =async()=>{
     const result = await UserLogout();

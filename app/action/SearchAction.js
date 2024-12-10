@@ -1,3 +1,4 @@
+"use server"
 import dbconnect from "@/db/dbconnect"; // Ensure DB connection
 import Product from "@/model/ProductModel"; // Import Product model
 
