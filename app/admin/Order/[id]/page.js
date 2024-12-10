@@ -16,7 +16,7 @@ export default async function OrderDetails({ orderId }) {
       <div className="p-8 bg-gradient-to-r from-red-500 via-red-600 to-red-700 text-white shadow-xl rounded-lg">
         <h2 className="text-4xl font-bold text-center mb-8">Order Not Found</h2>
         <p className="text-xl text-center">
-          Sorry, we couldn't find the order with ID: {orderId}. Please try again or contact support.
+          Sorry, we couldn&apos;t find the order with ID: {orderId}. Please try again or contact support.
         </p>
       </div>
     );
@@ -68,3 +68,4 @@ export default async function OrderDetails({ orderId }) {
     </div>
   );
 }
+

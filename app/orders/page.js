@@ -4,8 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createOrder } from "../action/OrderAction";
 
-
-export default function CheckoutPage({ cart, userId }) {
+export default function CheckoutPage({ cart = [], userId }) { // Ensure cart is always an array
   const router = useRouter();
   const [shippingInfo, setShippingInfo] = useState({
     address: '',
@@ -79,11 +78,15 @@ export default function CheckoutPage({ cart, userId }) {
       <div className="cart-summary">
         <h2>Your Cart</h2>
         <ul>
-          {cart.map(item => (
-            <li key={item._id}>
-              <span>{item.name} x {item.quantity}</span> - ${item.price * item.quantity}
-            </li>
-          ))}
+          {cart.length > 0 ? (
+            cart.map(item => (
+              <li key={item._id}>
+                <span>{item.name} x {item.quantity}</span> - ${item.price * item.quantity}
+              </li>
+            ))
+          ) : (
+            <p>Your cart is empty.</p>
+          )}
         </ul>
         <div className="total-price">
           <strong>Total Price: ${calculateTotalPrice()}</strong>
@@ -140,14 +143,15 @@ export default function CheckoutPage({ cart, userId }) {
           />
         </div>
 
-       {/*  {error && <p className="error-message">{error}</p>}
+        {/* Error and Order Status Messages */}
+        {error && <p className="error-message">{error}</p>}
         {orderStatus && <p className="success-message">{orderStatus}</p>}
 
         <div className="actions">
           <button type="submit" disabled={loading}>
             {loading ? 'Placing Order...' : 'Place Order'}
           </button>
-        </div> */}
+        </div>
       </form>
     </div>
   );
