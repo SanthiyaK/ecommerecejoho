@@ -201,6 +201,13 @@ export function Header() {
                         Products
                       </button>
                     </Link>
+
+                    {/* your order Link */}
+                    <Link href="/YourOrder" passHref>
+                      <button className="w-full px-4 py-2 text-left text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800 transition-colors duration-200 rounded-md">
+                        Your Order
+                      </button>
+                    </Link>
                     
                     {/* Admin Link (only for admin users) */}
                     {userRole === "admin" && (

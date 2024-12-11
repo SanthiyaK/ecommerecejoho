@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 const OrderItemSchema = new mongoose.Schema({
+
   productId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Product",
@@ -52,7 +53,7 @@ const orderSchema = new mongoose.Schema(
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,  // Reference to User model
-      ref: "UserModels",  // Assuming you have a User model
+      ref: "User",  // Assuming you have a User model
       required: true
     },
     shippingInfo: {  // New field to store shipping details
